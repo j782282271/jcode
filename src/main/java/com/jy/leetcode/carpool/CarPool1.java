@@ -4,6 +4,7 @@ package com.jy.leetcode.carpool;
  * Created by jiangyang on 2019/7/15.
  * 5ms       81.66%
  * 36.1MB    1000%
+ * 问题受限于1000大小限制
  */
 public class CarPool1 {
     public boolean carPooling(int[][] trips, int capacity) {
