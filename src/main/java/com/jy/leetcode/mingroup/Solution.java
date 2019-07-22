@@ -9,10 +9,9 @@ public class Solution {
 
     public int[] smallestSufficientTeam(String[] req_skills, List<List<String>> people) {
         Set<String> reqSkills = toSet(req_skills);
+        //优化速度
         preProcess(people);
         Map<String, List<Integer>> psMap = map(people, reqSkills);
-        //优化速度
-        reqSkills = toSet(req_skills, psMap);
         Set<Integer> resSet = smallestSufficientTeam(reqSkills, people, psMap);
 
         int[] res = new int[resSet.size()];
@@ -65,14 +64,6 @@ public class Solution {
 
     private Set<String> toSet(String[] req_sksills) {
         Set<String> res = new HashSet<>(req_sksills.length);
-        for (String sk : req_sksills) {
-            res.add(sk);
-        }
-        return res;
-    }
-
-    private Set<String> toSet(String[] req_sksills, Map<String, List<Integer>> psMap) {
-        TreeSet<String> res = new TreeSet<>((o1, o2) -> psMap.get(o1).size() <= psMap.get(o1).size() ? 1 : -1);
         for (String sk : req_sksills) {
             res.add(sk);
         }
