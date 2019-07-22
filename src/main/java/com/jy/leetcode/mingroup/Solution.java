@@ -6,10 +6,6 @@ import java.util.*;
  * Created by Administrator on 2019/7/20.
  */
 public class Solution {
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        int[] res = s.smallestSufficientTeam(new String[]{"java", "nodejs", "reactjs"}, all(all("java"), all("nodejs"), all("nodejs", "reactjs")));
-    }
 
     public int[] smallestSufficientTeam(String[] req_skills, List<List<String>> people) {
         Set<String> reqSkills = toSet(req_skills);
@@ -92,13 +88,5 @@ public class Solution {
                 }
             }
         }
-    }
-
-    private static List all(Object... eles) {
-        List list = new ArrayList();
-        for (Object e : eles) {
-            list.add(e);
-        }
-        return list;
     }
 }
