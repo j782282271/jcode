@@ -30,7 +30,7 @@ public class Solution {
         }
         String sk = reqSkills.iterator().next();
         List<Integer> ps = psMap.get(sk);
-        for (Integer p : ps) {  
+        for (Integer p : ps) {
             Set<String> reqSkillsTemp = new HashSet<>(reqSkills);
             reqSkillsTemp.removeAll(people.get(p));
             Set<Integer> resTemp = new HashSet<>();
