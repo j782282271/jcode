@@ -24,8 +24,8 @@ class Solution {
             list.addFirst(list.removeLast());
             list.addFirst(deck[i]);
         }
-        for (int i = 0; i < list.size(); ++i) {
-            deck[i] = list.get(i);
+        for (int i = 0; i < deck.length; ++i) {
+            deck[i] = list.removeFirst();
         }
         return deck;
     }
