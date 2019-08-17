@@ -14,6 +14,9 @@ class Solution {
         if (K == 0) {
             return N > W ? 0 : 1;
         }
+        if (N >= W + K) {
+            return 1;
+        }
         if (N < W) {
             return new21GameNLessThanW(N, K, W);
         }
@@ -58,7 +61,7 @@ class Solution {
         double dwp = (double) 1 / w;
         for (int i = 1; i < res.length; ++i) {
             double currentP = 0;
-            for (int j = i - 1; j >= 0 && i - j <= w; --j) {
+            for (int j = Math.max(i - w, 0); j < i; ++j) {
                 currentP += res[j];
             }
             currentP *= dwp;
