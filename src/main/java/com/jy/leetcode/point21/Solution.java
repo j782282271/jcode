@@ -17,10 +17,8 @@ class Solution {
         if (N < W) {
             return new21GameNLessThanW(N, K, W);
         }
-        double[] p;
-
-        p = getP(W, N);
-
+        //原来第二个参数填N,优化后改为K
+        double[] p = getP(W, K);
         double res = 0;
         double dwp = (double) 1 / W;
         int start = (N - W + 1);
@@ -33,7 +31,8 @@ class Solution {
     }
 
     public double new21GameNLessThanW(int N, int K, int W) {
-        double[] p = getP(W, W);
+        //原来第二个参数填W,优化后改为K
+        double[] p = getP(W, K);
         double res = 0;
         double dwp = (double) 1 / W;
         //倒数第二次的各种可能加上最后一次超出的概率
