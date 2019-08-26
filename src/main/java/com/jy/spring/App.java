@@ -11,9 +11,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public abstract class App implements BeanFactoryPostProcessor {
     public abstract Command abc();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
-        Command command = applicationContext.getBean(Command.class);
+        Command command = (Command) applicationContext.getBean("command");
+        ConstructorTest constructorTest = (ConstructorTest) applicationContext.getBean("constructorTest1");
+
+        Object o = applicationContext.getBean("&commandFactoryBean");
     }
 
     @Override
