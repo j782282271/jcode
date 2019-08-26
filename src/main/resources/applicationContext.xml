@@ -9,9 +9,23 @@
     <!--</context:component-scan>-->
 
     <bean id="command" class="com.jy.spring.Command">
+        <property name="map">
+            <map>
+                <entry key="a" value="va"></entry>
+                <entry key="b" value="vb"></entry>
+            </map>
+        </property>
     </bean>
 
     <bean id="app" class="com.jy.spring.App">
         <lookup-method name="abc" bean="command"/>
     </bean>
+
+    <bean id="constructorTest1" class="com.jy.spring.ConstructorTest" lazy-init="true" autowire="byType">
+        <constructor-arg index="0" ref="command"></constructor-arg>
+        <!--此处不需要填写app属性，只要是autowire="byType"则会将工厂中的所有App类型的bean注入到apps中-->
+        <!--<property name="apps" ref="app"></property>-->
+    </bean>
+
+    <bean id="commandFactoryBean" class="com.jy.spring.CommandFactoryBean"></bean>
 </beans>
