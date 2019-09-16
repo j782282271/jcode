@@ -7,7 +7,19 @@ import java.util.List;
  * Created by jiangyang on 2019/9/9.
  */
 class Solution {
-    private List<List<Integer>> lists = new ArrayList<>();
+    private List<int[]> lists = new ArrayList<>();
+
+    public static void main(String[] args) {
+//        LinkedList
+//        Collections.binarySearch()
+//        int nums[] = new int[]{10, 9, 2, 5, 3, 7, 101, 18};
+//        Solution solution = new Solution();
+//        int res = solution.lengthOfLIS(nums);
+
+//        int nums[] = new int[]{10, 9, 2, 5, 3, 4};
+//        Solution solution = new Solution();
+//        int res = solution.lengthOfLIS(nums);
+    }
 
     public int lengthOfLIS(int[] nums) {
         for (int i = 0; i < nums.length; ++i) {
@@ -19,35 +31,36 @@ class Solution {
 
     private void putIntLists(int ele) {
         if (lists.size() == 0) {
-            List<Integer> list = new ArrayList<>();
-            list.add(ele);
+            int[] list = new int[1];
+            list[0] = ele;
             lists.add(list);
             return;
         }
 
-        List<Integer> temp = null;
-        for (List<Integer> list : lists) {
-            if (list.get(list.size() - 1) < ele && (temp == null || temp.size() < list.size())) {
-                temp = list;
+        int[] temp = null;
+        for (int[] ints : lists) {
+            if (ints[ints.length - 1] < ele && (temp == null || temp.length < ints.length)) {
+                temp = ints;
             }
         }
 
         if (temp != null) {
-            List<Integer> dest = new ArrayList<>(temp);
-            dest.add(ele);
+            int[] dest = new int[temp.length + 1];
+            System.arraycopy(temp, 0, dest, 0, temp.length);
+            dest[temp.length] = ele;
             lists.add(dest);
         } else {
-            List<Integer> list = new ArrayList<>();
-            list.add(ele);
+            int[] list = new int[1];
+            list[0] = ele;
             lists.add(list);
         }
     }
 
     public int getMaxSize() {
         int size = 0;
-        for (List<Integer> list : lists) {
-            if (list.size() > size) {
-                size = list.size();
+        for (int[] list : lists) {
+            if (list.length > size) {
+                size = list.length;
             }
         }
         return size;
