@@ -3,14 +3,14 @@ package com.jy.leetcode.sum;
 /**
  * Created by jiangyang on 2019/9/16.
  */
-public class Solution2 {
+public class SolutionMinMem {
     int[][] dp;
     private static int BASE_L = 1002;
     private static int L = BASE_L * 2;
 
     public static void main(String[] args) {
         int[] nums = new int[]{1, 1, 1, 1, 1};
-        Solution2 s = new Solution2();
+        SolutionMinMem s = new SolutionMinMem();
         int res = s.findTargetSumWays(nums, 3);
 
 //        int[] nums = new int[]{1000};

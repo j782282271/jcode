@@ -21,7 +21,7 @@ public class DiGuiCachedMinMem {
         if (S > 1000 || S < -1000) {
             return 0;
         }
-        cached = new int[nums.length][L];
+        cached = new int[2][L];
         for (int i = 0; i < cached.length; ++i) {
             Arrays.fill(cached[i], -1);
         }
@@ -35,12 +35,21 @@ public class DiGuiCachedMinMem {
             }
             return 0;
         }
-        if (cached[curr][Math.abs(s)] != -1) {
-            return cached[curr][Math.abs(s)];
+        if (cached[getPreIndex(curr)][Math.abs(s)] != -1) {
+            return cached[getPreIndex(curr)][Math.abs(s)];
         }
         int pos = findInner(nums, curr + 1, s - nums[curr]);
         int neg = findInner(nums, curr + 1, s + nums[curr]);
-        cached[curr][Math.abs(s)] = pos + neg;
+        cached[getIndex(curr)][Math.abs(s)] = pos + neg;
         return pos + neg;
+    }
+
+    private int getIndex(int i) {
+        return i % 2;
+    }
+
+    private int getPreIndex(int i) {
+        int iModPre = (i % 2) - 1 < 0 ? 1 : 0;
+        return iModPre;
     }
 }
