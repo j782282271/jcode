@@ -24,7 +24,7 @@ public class SolutionBottom2High {
             return 0;
         }
         pairs = sortAndFilter(pairs);
-        dp = new int[pairs.length + 1];
+        dp = new int[pairs.length];
         return findLongestChainInner(pairs);
     }
 
