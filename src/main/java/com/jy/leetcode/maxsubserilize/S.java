@@ -1,4 +1,4 @@
-package com.jy.leetcode.minsubserilize;
+package com.jy.leetcode.maxsubserilize;
 
 /**
  * Created by jiangyang on 2019/9/12.

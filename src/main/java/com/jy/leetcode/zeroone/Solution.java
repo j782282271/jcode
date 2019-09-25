@@ -2,6 +2,7 @@ package com.jy.leetcode.zeroone;
 
 /**
  * Created by jiangyang on 2019/9/3.
+ * https://leetcode-cn.com/problems/ones-and-zeroes/
  * 背包问题：https://blog.csdn.net/u013885699/article/details/80248536
  */
 public class Solution {

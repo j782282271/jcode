@@ -2,6 +2,7 @@ package com.jy.leetcode.minstairs;
 
 /**
  * Created by jiangyang on 2019/8/9.
+ * https://leetcode-cn.com/problems/min-cost-climbing-stairs/
  */
 class Best {
 

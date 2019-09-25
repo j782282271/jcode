@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 /**
  * Created by Administrator on 2019/7/29.
+ * https://leetcode-cn.com/problems/reveal-cards-in-increasing-order/
  */
 public class Solution {
     public static void main(String[] args) {

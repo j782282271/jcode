@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * Created by Administrator on 2019/7/20.
+ * https://leetcode-cn.com/problems/smallest-sufficient-team/
  */
 public class Solution {
 

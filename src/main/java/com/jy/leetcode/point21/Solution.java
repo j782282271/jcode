@@ -2,6 +2,7 @@ package com.jy.leetcode.point21;
 
 /**
  * Created by Administrator on 2019/8/17.
+ * https://leetcode-cn.com/problems/new-21-game/
  */
 class Solution {
     public double new21Game(int N, int K, int W) {

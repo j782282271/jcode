@@ -1,10 +1,11 @@
-package com.jy.leetcode.minsubserilize;
+package com.jy.leetcode.maxsubserilize;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by jiangyang on 2019/9/9.
+ * https://leetcode-cn.com/problems/longest-increasing-subsequence/
  */
 class Solution {
     private List<int[]> lists = new ArrayList<>();

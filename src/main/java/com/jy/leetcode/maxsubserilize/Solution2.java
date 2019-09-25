@@ -1,4 +1,4 @@
-package com.jy.leetcode.minsubserilize;
+package com.jy.leetcode.maxsubserilize;
 
 import java.util.ArrayList;
 import java.util.List;

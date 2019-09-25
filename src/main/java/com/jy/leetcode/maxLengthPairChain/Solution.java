@@ -6,6 +6,7 @@ import java.util.Set;
 
 /**
  * Created by jiangyang on 2019/9/24.
+ * https://leetcode-cn.com/classic/problems/maximum-length-of-pair-chain/description/
  */
 public class Solution {
 
