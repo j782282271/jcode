@@ -1,4 +1,4 @@
-package com.jy.designpattern.intercept;
+package com.jy.designpattern.interpreter;
 
 import java.util.HashMap;
 
@@ -16,7 +16,7 @@ public class VarExpression extends Expression {
     }
 
     @Override
-    public int interceptor(HashMap<String, Integer> var) {
+    public int interpreter(HashMap<String, Integer> var) {
         return var.get(this.key);
     }
 

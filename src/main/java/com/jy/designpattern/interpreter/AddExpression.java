@@ -1,4 +1,4 @@
-package com.jy.designpattern.intercept;
+package com.jy.designpattern.interpreter;
 
 import java.util.HashMap;
 
@@ -14,8 +14,8 @@ public class AddExpression extends SymbolExpression {
 //把左右两个表达式运算的结果加起来
 
     @Override
-    public int interceptor(HashMap<String, Integer> var) {
-        return super.left.interceptor(var) + super.right.interceptor(var);
+    public int interpreter(HashMap<String, Integer> var) {
+        return super.left.interpreter(var) + super.right.interpreter(var);
     }
 
 }

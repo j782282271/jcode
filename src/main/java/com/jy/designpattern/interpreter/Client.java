@@ -1,4 +1,4 @@
-package com.jy.designpattern.intercept;
+package com.jy.designpattern.interpreter;
 
 import java.io.BufferedReader;
 import java.io.IOException;

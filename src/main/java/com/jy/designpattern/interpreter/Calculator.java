@@ -1,4 +1,4 @@
-package com.jy.designpattern.intercept;
+package com.jy.designpattern.interpreter;
 
 import java.util.HashMap;
 import java.util.Stack;
@@ -37,6 +37,6 @@ public class Calculator {
 
     //开始运算
     public int run(HashMap<String, Integer> var) {
-        return this.expression.interceptor(var);
+        return this.expression.interpreter(var);
     }
 }

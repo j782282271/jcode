@@ -1,4 +1,4 @@
-package com.jy.designpattern.intercept;
+package com.jy.designpattern.interpreter;
 
 import java.util.HashMap;
 
@@ -12,8 +12,8 @@ public class SubExpression extends SymbolExpression {
     }
 
     @Override
-    public int interceptor(HashMap<String, Integer> var) {
-        return super.left.interceptor(var) - super.right.interceptor(var);
+    public int interpreter(HashMap<String, Integer> var) {
+        return super.left.interpreter(var) - super.right.interpreter(var);
     }
 
 }
